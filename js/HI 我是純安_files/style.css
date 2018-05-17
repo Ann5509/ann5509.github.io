@@ -1,0 +1,214 @@
+a:hover {
+  text-decoration: none;
+  transition: 0.3s; }
+
+img {
+  width: 100%; }
+
+.dis-flex {
+  display: flex; }
+
+.ver-center {
+  display: flex;
+  align-items: center; }
+
+.text-center {
+  text-align: center; }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  color: #6E7783; }
+  .navbar .nav-active {
+    color: white;
+    background: #77AAAD;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.2); }
+  .navbar a {
+    color: inherit; }
+  .navbar .overlay {
+    transition: opacity 300ms, visibility 300ms;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: -2;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    width: 100vw;
+    height: calc(100vh - 60px); }
+    .navbar .overlay.menu_open {
+      visibility: visible;
+      opacity: 0.6;
+      z-index: 100; }
+
+.menu-collapse {
+  margin-left: auto; }
+
+.menu-switch {
+  display: none;
+  float: right;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  color: black;
+  padding: 21px 15px;
+  width: auto; }
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 8px;
+  margin: 6px auto 4px;
+  border-top: 2px solid black;
+  transition: 0.3s; }
+  .hamburger:before, .hamburger:after {
+    content: '';
+    position: absolute;
+    left: 13px;
+    width: 2px;
+    height: 25px;
+    overflow: hidden;
+    background: black;
+    transition: 0.3s; }
+  .hamburger:before {
+    top: -10px;
+    transform: translate(-100%, -50%) rotate(-90deg); }
+  .hamburger:after {
+    top: -16px;
+    transform: translate(-100%, 50%) rotate(90deg); }
+  .hamburger.active:before, .hamburger.active:after {
+    border-top: none;
+    margin: 0;
+    left: 14px;
+    transition: 0.3s; }
+  .hamburger.active:before {
+    transform: translate(0%, -15%) rotate(90deg); }
+  .hamburger.active:after {
+    transform: translate(-100%, 9%) rotate(-90deg); }
+
+.sec-content {
+  padding: 100px 0px;
+  color: #6E7783; }
+
+.first-sec {
+  padding: 150px 0;
+  color: #6E7783; }
+
+.block-about {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 40px 20px;
+  color: white;
+  border-radius: 5px; }
+
+#anc-skill {
+  box-shadow: inset 0px 15px 20px -12px #CCC; }
+
+#anc-experience {
+  box-shadow: inset 0px -15px 20px -12px #CCC; }
+
+.box-circle {
+  margin: 0 auto 30px;
+  border: 2px solid #77AAAD;
+  padding: 2px;
+  color: white;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: #9cc3c2;
+  box-shadow: 2px 6px 17px 0px black; }
+
+.mar-auto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #77AAAD;
+  border-radius: 50%;
+  font-weight: bold;
+  height: inherit;
+  width: inherit; }
+
+.section-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 60px; }
+
+.info-author {
+  color: inherit;
+  margin-bottom: 30px; }
+
+.info-txt {
+  color: inherit;
+  text-align: justify; }
+  .info-txt:last-of-type {
+    margin-bottom: 30px; }
+
+.portfolio-name {
+  margin-bottom: 0;
+  color: #9DC3C1; }
+
+.img-block {
+  padding: 31% 0;
+  margin-bottom: 15px;
+  border-radius: 5px; }
+
+.img-fit {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.box-radius {
+  border-radius: 5px; }
+
+footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #6E7783;
+  padding: 10px 20px;
+  color: white; }
+
+.contact-ul {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0; }
+  footer .contact-ul {
+    margin-left: auto; }
+
+.contact-li {
+  margin-right: 15px; }
+
+.author {
+  margin-bottom: 0;
+  color: inherit; }
+
+.contact-href {
+  color: inherit; }
+  .contact-href:hover {
+    color: #77AAAD; }
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 68px;
+  width: 30px;
+  height: 30px;
+  background: #9DC3C1;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  opacity: 0; }
+  .back-to-top .show {
+    opacity: 1; }
+  .back-to-top:hover {
+    color: inherit;
+    background: #77AAAD; }
+
+/*# sourceMappingURL=style.css.map */
