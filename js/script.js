@@ -13,17 +13,21 @@ $(document).ready(function() {
         return false;
     });
 
-    $(".menu-switch").on("click", function() {
-        $('.hamburger').toggleClass('active');
-        $('.menu-collapse').slideToggle(300);
-        $('body').toggleClass('overflow');
-    });
+    var screenWidth = $(window).width();
 
-    $('.nav-link').on("click", function() {
-    	$('.hamburger').toggleClass('active');
-    	$('.menu-collapse').slideToggle(300);
-        $('body').toggleClass('overflow');
-    });
+    if (screenWidth < 768) {
+        $(".menu-switch").on("click", function() {
+            $('.hamburger').toggleClass('active');
+            $('.menu-collapse').slideToggle(300);
+            $('body').toggleClass('overflow');
+        });
+
+        $('.nav-link').on("click", function() {
+            $('.hamburger').toggleClass('active');
+            $('.menu-collapse').slideToggle(300);
+            $('body').toggleClass('overflow');
+        });
+    }
 
 });
 
