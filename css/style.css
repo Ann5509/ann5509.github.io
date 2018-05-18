@@ -35,6 +35,15 @@ ul {
   color: white;
   background-color: #F5CF74; }
 
+.bg-overlay, #anc-experience:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); }
+
 .navbar {
   position: fixed;
   top: 0;
@@ -126,21 +135,13 @@ ul {
   color: #6E7783; }
 
 #anc-skill {
-  box-shadow: inset 0px 15px 20px -12px #CCC , inset 0px -15px 20px -12px #CCC;
+  box-shadow: inset 0px 15px 20px -12px #CCC, inset 0px -15px 20px -12px #CCC;
   background: #f2f2f2; }
 
 #anc-experience {
   position: relative;
   background-image: url("../images/banner/bg.jpg");
   background-attachment: fixed; }
-  #anc-experience:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75); }
 
 .about-body {
   margin-left: 20px; }
@@ -187,9 +188,21 @@ ul {
   #anc-experience .section-header {
     color: white; }
 
+.info-pic {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #f2f2f2;
+  box-shadow: 4px 7px 24px -3px rgba(0, 0, 0, 0.2); }
+
 .info-author {
-  color: inherit;
-  margin: 20px 0; }
+  text-align: center;
+  color: #77AAAD;
+  margin: 20px 0;
+  padding-bottom: 20px; }
 
 .info-txt {
   color: inherit;
