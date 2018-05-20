@@ -307,6 +307,8 @@ footer {
   color: inherit; }
   .contact-href:hover {
     color: white; }
+  #anc-about .contact-href:hover {
+    color: #77AAAD; }
 
 .icon-map {
   color: #ef860f; }

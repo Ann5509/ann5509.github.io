@@ -401,6 +401,11 @@ footer {
     &:hover {
         color: white;
     }
+    #anc-about &{
+        &:hover{
+            color: $color-2;
+        }
+    }
 }
 
 // icon
