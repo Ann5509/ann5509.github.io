@@ -1,3 +1,7 @@
+@charset "UTF-8";
+body {
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, "Hiragino Maru Gothic ProN", メイリオ, "ヒラギノ丸ゴ ProN W4", 微軟正黑體, Meiryo, "Droid Sans"; }
+
 a:hover {
   text-decoration: none;
   transition: 0.3s; }
