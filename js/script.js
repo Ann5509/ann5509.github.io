@@ -1,37 +1,3 @@
-$(document).ready(function() {
-
-    $('.back-to-top').click(function() {
-        $('body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 1400);
-    });
-
-    $('a').click(function() {
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top
-        }, 500);
-        return false;
-    });
-
-    var screenWidth = $(window).width();
-
-    if (screenWidth < 768) {
-        $(".menu-switch").on("click", function() {
-            $('.hamburger').toggleClass('active');
-            $('.menu-collapse').slideToggle(300);
-            $('body').toggleClass('overflow');
-        });
-
-        $('.nav-link').on("click", function() {
-            $('.hamburger').toggleClass('active');
-            $('.menu-collapse').slideToggle(300);
-            $('body').toggleClass('overflow');
-        });
-    }
-
-});
-
-
 function stickyHeader() {
     if ($('.navbar').length) {
         var strickyScrollPos = 100;
@@ -49,7 +15,57 @@ function stickyHeader() {
     };
 }
 
-// instance of fuction while Window Scroll event
-$(window).scroll(function() {
-    stickyHeader();
+$(document).ready(function() {
+
+    $('.back-to-top').click(function() {
+        $('body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 1400);
+    });
+
+    $('a').click(function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 500);
+        return false;
+    });
+
+    var screenWidth = $(window).width();
+
+    $(window).resize(function() {
+
+        screenWidth = $(window).width();
+
+        if (screenWidth > 768) {
+            $('.menu-collapse').css("display", "flex");
+        } else {
+            $('.menu-collapse').css("display", "none");
+        }
+
+    });
+
+    $(document).on("click", ".menu-switch", function() {
+        aaa();
+    });
+
+    $(".nav-link").on("click", function() {
+
+        if (screenWidth < 769) {
+            aaa();
+        }
+
+    });
+
+    // instance of fuction while Window Scroll event
+    $(window).scroll(function() {
+        stickyHeader();
+    });
+
 });
+
+
+function aaa() {
+    $('.hamburger').toggleClass('active');
+    $('.menu-collapse').slideToggle(300);
+    $('body').toggleClass('overflow');
+}

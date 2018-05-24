@@ -300,9 +300,6 @@ footer {
     .menu-collapse .contact-ul .contact-href {
       margin: 0 10px; }
 
-.contact-li {
-  margin-right: 15px; }
-
 .author {
   margin-bottom: 0;
   color: inherit; }
@@ -350,15 +347,23 @@ footer {
 
   .menu-nav {
     display: block;
-    padding-left: 0; } }
+    padding-left: 0; }
+
+  .sec-content {
+    padding-top: 100px;
+    padding-bottom: 100px; } }
 @media screen and (min-width: 769px) {
   .menu-switch {
     display: none; }
 
-  .menu-collapse .contact-ul {
-    margin-top: 0;
-    padding-top: 0px;
-    border-top: 0; }
+  .menu-collapse {
+    display: flex; }
+    .menu-collapse .contact-ul {
+      margin-top: 0;
+      padding-top: 0px;
+      border-top: 0; }
+    .menu-collapse.active {
+      height: auto; }
 
   .sec-content {
     padding-top: 100px;
