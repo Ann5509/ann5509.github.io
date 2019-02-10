@@ -23,10 +23,6 @@ gulp.task('scss', function () {
         .pipe(gulp.dest('./css'))
 });
 
-// gulp.task("default", ["js", "scss"], function() {
-//   return gulp.src("src/index.html").pipe(gulp.dest("dist"));
-// });
-
 gulp.task("watch", function() {
   //自定一個watch的排程名稱
     gulp.watch("./scss/style.scss", ["scss"]); //監聽路徑，以及檔案變更後所執行的任務
