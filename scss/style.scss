@@ -1,7 +1,8 @@
 // html setting
-body{
-font-family: Roboto, "Helvetica Neue", Helvetica, Arial, "Hiragino Maru Gothic ProN", メイリオ, "ヒラギノ丸ゴ ProN W4", 微軟正黑體, Meiryo, "Droid Sans";
+body {
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, "Hiragino Maru Gothic ProN", メイリオ, "ヒラギノ丸ゴ ProN W4", 微軟正黑體, Meiryo, "Droid Sans";
 }
+
 a:hover {
     text-decoration: none;
     transition: 0.3s;
@@ -84,15 +85,18 @@ $sub-color: #F3C69B;
     transition: 0.3s;
     padding-top: 20px;
     z-index: 10;
+
     &.nav-active {
         color: white;
         background: $color-2;
         box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.2);
         padding-top: 8px;
     }
+
     a {
         color: inherit;
     }
+
     .overlay {
         transition: opacity 300ms, visibility 300ms;
         opacity: 0;
@@ -105,6 +109,7 @@ $sub-color: #F3C69B;
         background: #000;
         width: 100vw;
         height: calc(100vh - 60px);
+
         &.menu_open {
             visibility: visible;
             opacity: 0.6;
@@ -140,6 +145,7 @@ $sub-color: #F3C69B;
     margin: 6px auto 4px;
     border-top: 2px solid white;
     transition: 0.3s;
+
     &:before,
     &:after {
         content: '';
@@ -151,15 +157,19 @@ $sub-color: #F3C69B;
         background: white;
         transition: 0.3s;
     }
+
     &:before {
         top: -10px;
         transform: translate(-100%, -50%) rotate(-90deg);
     }
+
     &:after {
         top: -16px;
         transform: translate(-100%, 50%) rotate(90deg);
     }
+
     &.active {
+
         &:before,
         &:after {
             border-top: none;
@@ -167,9 +177,11 @@ $sub-color: #F3C69B;
             left: 14px;
             transition: 0.3s;
         }
+
         &:before {
             transform: translate(0%, -15%) rotate(90deg);
         }
+
         &:after {
             transform: translate(-100%, 9%) rotate(-90deg);
         }
@@ -197,10 +209,21 @@ $sub-color: #F3C69B;
     background-image: url('../images/banner/bg.jpg');
     background-attachment: fixed;
     @extend .img-fit;
+
     &:before {
         @extend .bg-overlay;
     }
 }
+
+#anc-practice {
+    box-shadow: inset 0 15px 20px -12px #CCC, inset 0 -15px 20px -12px #CCC;
+    background: #f2f2f2;
+
+    .portfolio-name {
+        color: #6e7783;
+    }
+}
+
 
 .about-body {
     margin-left: 20px;
@@ -214,12 +237,14 @@ $sub-color: #F3C69B;
     background: linear-gradient($color-3 30%, $color-2 100%);
     box-shadow: 2px 6px 17px 0px black;
     transition: 0.3s;
+
     &:active {
         position: relative;
         top: -1px;
         left: -1px;
         background: red;
     }
+
     &:hover {
         border-radius: 12px;
         transform: rotate(135deg);
@@ -236,6 +261,7 @@ $sub-color: #F3C69B;
     height: inherit;
     width: inherit;
     transition: 0.3s;
+
     &:hover {
         top: 1px;
         left: 1px;
@@ -245,11 +271,19 @@ $sub-color: #F3C69B;
 
 
 // content
+.readmore{
+    background: transparent;
+    font-size: 12px;
+    color: #6e7783;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
 .section-header {
     position: relative;
     z-index: 1;
     text-align: center;
     margin-bottom: 40px;
+
     #anc-experience & {
         color: white;
     }
@@ -267,24 +301,27 @@ $sub-color: #F3C69B;
 }
 
 .info-author {
-    text-align: center;
     color: $color-2;
     margin: 20px 0;
-    padding-bottom: 20px;
+    .sub-txt{
+        color: inherit;
+        font-size: 18px;
+    }
 }
 
 .info-txt {
     color: inherit;
     text-align: justify;
+
     &:last-of-type {
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
     }
 }
 
 .sub-txt {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
-    color: $color-1;
+    color: white;
 }
 
 .portfolio-name {
@@ -298,6 +335,7 @@ $sub-color: #F3C69B;
     margin-bottom: 15px;
     border-radius: 5px;
     box-shadow: 3px 3px 11px rgba(0, 0, 0, 0.1);
+
     &:hover {
         position: relative;
         top: -5px;
@@ -321,12 +359,19 @@ $sub-color: #F3C69B;
     box-shadow: 3px 3px 11px #0000001c;
     background-color: white;
     border-radius: 5px;
-    &:hover {
+
+    &:hover,
+    &.active {
         position: relative;
         top: -5px;
+
+        .exper-content {
+            padding: 30px 20px 40px;
+        }
+
         .exper-jub {
             background: #F46E77;
-            clip-path: polygon(0% 0%, 0% 90%, 50% 70%, 100% 90%, 100% 0);
+            clip-path: polygon(0% 0%, 0% 70%, 50% 100%, 100% 70%, 100% 0);
         }
     }
 }
@@ -343,24 +388,25 @@ $sub-color: #F3C69B;
     color: white;
     text-align: center;
     background: $color-2;
-    clip-path: polygon(0% 0%, 0% 70%, 50% 100%, 100% 70%, 100% 0);
     transition: 0.3s;
+    clip-path: polygon(0 0, 0 74%, 50% 74%, 100% 74%, 100% 0);
 }
 
 .exper-content {
-    padding-bottom: 20px;
+    padding: 10px 20px 40px;
     border-bottom: 1px solid #d6d6d6;
     margin-bottom: 10px;
-    height: 7em;
 }
 
 .exper-company {
     margin-bottom: 0;
+    padding: 0 20px;
 }
 
 .exper-period {
     font-size: 12px;
     margin-bottom: 0;
+    padding: 0 20px;
 }
 
 
@@ -376,14 +422,17 @@ footer {
     list-style: none;
     margin-bottom: 0;
     padding: 0;
+
     footer & {
         margin-left: auto;
     }
+
     .menu-collapse & {
         font-size: 20px;
         margin-top: 30px;
         padding-top: 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.4);
+
         .contact-href {
             margin: 0 10px;
         }
@@ -397,11 +446,13 @@ footer {
 
 .contact-href {
     color: inherit;
+
     &:hover {
         color: white;
     }
-    #anc-about &{
-        &:hover{
+
+    #anc-about & {
+        &:hover {
             color: $color-2;
         }
     }
@@ -425,9 +476,11 @@ footer {
     color: white;
     text-align: center;
     opacity: 0;
+
     &.show {
         opacity: 1;
     }
+
     &:hover {
         color: inherit;
         background: $color-2;
@@ -448,11 +501,13 @@ footer {
         z-index: 3;
         box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2) inset;
     }
+
     .menu-nav {
         display: block;
         padding-left: 0;
     }
-    .sec-content{
+
+    .sec-content {
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -462,27 +517,34 @@ footer {
     .menu-switch {
         display: none;
     }
+
     .menu-collapse {
         display: flex;
+
         .contact-ul {
             margin-top: 0;
             padding-top: 0px;
             border-top: 0;
         }
-        &.active{
+
+        &.active {
             height: auto;
         }
     }
+
     .sec-content {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
     .first-sec {
         padding-top: 150px;
     }
+
     footer {
         display: flex;
         align-items: center;
+
         .contact-ul {
             display: flex;
         }
