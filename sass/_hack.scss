@@ -1,0 +1,103 @@
+html {
+  //   &.edge,
+  &#iphone.mobile.chrome {
+    .menupop,
+    .modal_agreement {
+      transition: 1s ease;
+    }
+
+    .menu_line_item {
+      transition: none;
+      &:nth-child(1),
+      &:nth-child(2) {
+        transition: none;
+      }
+    }
+
+    .menu_switch {
+      .menu_line {
+        opacity: 1;
+      }
+
+      .menu_svg {
+        opacity: 0;
+      }
+      &.active {
+        .menu_line {
+          opacity: 0;
+        }
+
+        .menu_svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.android.mobile {
+    .kv {
+      @media screen and (max-width: 576px) {
+        height: 93vh;
+      }
+    }
+
+    // .menu_svg {
+    //   right: -5px;
+    //   width: 16px;
+    //   height: 16px;
+    // }
+  }
+
+  &.xiaomi.mobile {
+    @media screen and (max-width: 576px) {
+      height: 100vh;
+    }
+  }
+
+  &.ie {
+    .form {
+      width: 880px;
+      max-width: 100%;
+    }
+    .agreement_info {
+      flex: auto;
+    }
+
+    .kv_logo {
+      max-height: 305px;
+    }
+  }
+
+  &.mobile,
+  &.ie,
+  &.firefox {
+    .modal_scrollline {
+      display: none;
+    }
+  }
+
+  &.edge,
+  &.ie {
+    .checkbox {
+      &-agreement {
+        @extend %flexCenter;
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+
+  &.edge {
+    .menu_switch {
+      .menu_circle_path {
+        transition: stroke-dashoffset 1.4s cubic-bezier(0.075, 0.82, 0.165, 1),
+          stroke 0.3s;
+      }
+
+      &.active {
+        transition: stroke-dashoffset 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+          stroke 0.3s;
+      }
+    }
+  }
+}
