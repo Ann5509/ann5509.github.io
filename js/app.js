@@ -5,9 +5,9 @@ var app = new Vue({
             menu: {
                 sec: 1,
                 items: [
-                    { name: '關於我', anchor: 'about', icon: 'fas fa-smile' },
+                    { name: '關於我', anchor: 'about', icon: 'fas fa-user' },
                     { name: '工作經驗', anchor: 'experience', icon: 'fas fa-briefcase' },
-                    { name: '參與作品', anchor: 'works', icon: 'fas fa-smile' },
+                    { name: '參與作品', anchor: 'works', icon: 'fas fa-laptop-code' },
                     { name: '趣味・遊戲', anchor: 'practice', icon: 'fas fa-gamepad' },
                 ],
             },
@@ -231,11 +231,17 @@ var app = new Vue({
     },
 });
 
+var $sec = null,
+    scrollPos = 0,
+    winH = 0,
+    winW = 0;
+
 $(window)
-    .on('scroll', function() {
-        var $sec = $('section');
-    })
     .on('load', function() {
+        $sec = $('section');
+        setInitData();
+        lazyLoading('.js-lazy');
+
         var that = app;
         var hashTag = location.hash;
         var menuItems = that.menu.items;
@@ -255,6 +261,46 @@ $(window)
                 .stop()
                 .animate({ scrollTop: scrollHeight }, 10);
         }
+    })
+    .on('scroll', function() {
+        $sec = $('section');
+        setInitData();
+        lazyLoading('.js-lazy');
+
+        $sec.each(function(i, el) {
+            var $elTop = $(el).offset().top;
+            var $elH = $(el).outerHeight(true);
+            if (scrollPos + winH >= $elTop && scrollPos + winH <= $elH + $elTop) {
+                app.menu.sec = i + 1;
+            }
+        });
     });
 
-var cursorItem = '.js-cursor';
+// full height
+function setInitData() {
+    scrollPos = document.documentElement.scrollTop || document.body.scrollTop || 0;
+    winW = $(window).outerWidth();
+    winH = $(window).outerHeight();
+}
+
+function lazyLoading(target) {
+    var $els = $(target);
+
+    $els.each((i, el) => {
+        var that = $(el);
+        var $landing = that.siblings('[data-lazy="lazy"]');
+
+        if (scrollPos + winH > $landing.offset().top && !$landing.hasClass('loaded')) {
+            $src = that.attr('data-original');
+            that.attr('src', $src);
+            $landing.css({
+                'background-image': 'url(' + $src + ')',
+            });
+
+            that.on('load', function() {
+                that.siblings('.embed_lazy').addClass('uncover');
+                $landing.addClass('loaded');
+            });
+        }
+    });
+}
