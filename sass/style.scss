@@ -369,13 +369,20 @@ img {
         flex: 0 0 45px;
         width: 45px;
         height: 45px;
-        background-color: $secMain;
         font-size: 25px;
         border-radius: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: #202020;
+
+        .about_skills & {
+            background-color: $secMain;
+        }
+
+        .about_dev & {
+            background-color: #3282ce;
+        }
     }
 
     &_info {
@@ -386,6 +393,10 @@ img {
     &_title {
         font-size: 24px;
         color: $text-lighter;
+    }
+
+    &_txt {
+        min-height: 52px;
     }
 
     &_box {
