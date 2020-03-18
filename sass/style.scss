@@ -16,8 +16,23 @@ body {
     }
 }
 
+body {
+    position: relative;
+    opacity: 0;
+    background: #fff;
+
+    &.loaded {
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+}
+
 .container {
     max-width: 1024px;
+}
+
+img {
+    display: block;
 }
 
 // section
@@ -46,6 +61,15 @@ body {
 
 .about {
     @extend %darkBg;
+
+    &_title {
+        font-size: 32px;
+    }
+
+    &_author {
+        font-size: 24px;
+        font-weight: bold;
+    }
 
     &_skills {
         margin-top: 60px;
@@ -316,13 +340,22 @@ body {
         white-space: nowrap;
     }
 
+    &_body {
+        .card_link {
+            margin-bottom: 1rem;
+        }
+    }
+
     &_link {
         display: block;
-        margin-bottom: 1rem;
     }
 
     &:hover {
         transform: translateY(-10px);
+    }
+
+    &_link.off {
+        pointer-events: none;
     }
 }
 
@@ -333,9 +366,9 @@ body {
     margin-bottom: 1.5rem;
 
     &_icon {
-        flex: 0 0 50px;
-        width: 50px;
-        height: 50px;
+        flex: 0 0 45px;
+        width: 45px;
+        height: 45px;
         background-color: $secMain;
         font-size: 25px;
         border-radius: 5px;
@@ -405,5 +438,26 @@ body {
 
     100% {
         opacity: 0;
+    }
+}
+
+.modal {
+    &_container {
+        width: 80vh;
+        max-width: 900px;
+    }
+
+    .thumb {
+        display: flex;
+        width: 100%;
+
+        &_item {
+            width: 20%;
+            margin-right: 10px;
+        }
+
+        .embed_media {
+            background-size: auto 100%;
+        }
     }
 }

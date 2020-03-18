@@ -2,6 +2,10 @@ var app = new Vue({
     el: '#app',
     data() {
         return {
+            status: {
+                galleryModal: false,
+            },
+
             menu: {
                 sec: 1,
                 items: [
@@ -16,7 +20,7 @@ var app = new Vue({
                 {
                     date: '2020 / 03 - 2019 / 04',
                     jobTitle: '前端工程師',
-                    jobInfo: '活動網站切版與前端開發，包含網站測試與維護，與GTM追蹤代碼安裝。',
+                    jobInfo: '活動網站製作、前端開發、網站測試與維護，以及GTM追蹤代碼安裝。',
                     company: '邁圈數位整合有限公司',
                     address: 'https://goo.gl/maps/tZjVzaxAmZQqUHHE7',
                 },
@@ -24,7 +28,7 @@ var app = new Vue({
                     date: '2019 / 03 - 2018 / 06',
                     jobTitle: '前端工程師',
                     jobInfo:
-                        '使用 Drupal(CMS，內容管理系統)進行網頁開發，以及 Nuxt.js，與團隊分工合作開發如官方網站、一頁式活動網站以及購物網站。',
+                        '使用 Drupal(CMS，內容管理系統)、Vue.js與Nuxt.js網頁開發。團隊分工合作開發如官方網站、一頁式活動網站以及購物網站。',
                     company: '聖誕老人國際股份有限公司',
                     address: 'https://goo.gl/maps/7nSE5KKyZpn',
                 },
@@ -32,7 +36,7 @@ var app = new Vue({
                     date: '2018 / 06 - 2016 / 07',
                     jobTitle: '網站設計 / 實習',
                     jobInfo:
-                        '參與專案規劃與製作，執行專案網站的製作與切版(含行動版)，如官方網站、活動網站、EDM電子郵件廣告，以及網站前後台的維護。',
+                        '參與專案規劃與製作、網站製作，如官方網站、活動網站、EDM電子郵件廣告，以及網站前後台的維護。',
                     company: '凱斯整合行銷有限公司',
                     address: 'https://goo.gl/maps/SJx1nTNjBCC2',
                 },
@@ -52,6 +56,7 @@ var app = new Vue({
                     imgUrl: 'etudehouse.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: 'IPSA肌膚檢測專家',
@@ -59,6 +64,7 @@ var app = new Vue({
                     imgUrl: 'skincare.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: 'IPSA流金水 水嫩發光100%',
@@ -66,13 +72,19 @@ var app = new Vue({
                     imgUrl: 'goldwater.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: '敦南好好',
-                    url: 'https://dunnanhowhow.h35.tw/',
+                    url: '',
                     imgUrl: 'dunnan.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: {
+                        path: 'dunnan',
+                        num: 4,
+                        state: true,
+                    },
                 },
                 {
                     name: '迪卡儂十項全能運動派對活動',
@@ -80,13 +92,19 @@ var app = new Vue({
                     imgUrl: 'decathlon.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Nuxt.js', color: 'olive' }],
+                    gallery: {
+                        main: '',
+                        photo: [],
+                        state: true,
+                    },
                 },
                 {
                     name: '正義聯盟',
-                    url: 'https://zy.h35.tw/',
+                    url: '',
                     imgUrl: 'justice.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: 'Amway安麗純淨居家',
@@ -94,6 +112,7 @@ var app = new Vue({
                     imgUrl: 'witness.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: 'Amway安麗海外旅遊研討會獎勵方案',
@@ -101,6 +120,7 @@ var app = new Vue({
                     imgUrl: 'incentivetrip.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: 'Amway安麗核心加碼計畫',
@@ -108,6 +128,7 @@ var app = new Vue({
                     imgUrl: 'coreplusincentive.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: '2019華為新影像大賽 next-image',
@@ -115,6 +136,7 @@ var app = new Vue({
                     imgUrl: 'nextimage2019.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: 'KNCKFF.COM',
@@ -122,6 +144,7 @@ var app = new Vue({
                     imgUrl: 'knckff.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Drupal', color: 'cyan' }],
+                    gallery: { state: false },
                 },
                 {
                     name: '宇恩到府月子護理長',
@@ -129,6 +152,7 @@ var app = new Vue({
                     imgUrl: 'yuennurse.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Nuxt.js', color: 'olive' }],
+                    gallery: { state: false },
                 },
                 {
                     name: '英倫護理之家',
@@ -136,6 +160,7 @@ var app = new Vue({
                     imgUrl: 'yinglunbaby.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Drupal', color: 'cyan' }],
+                    gallery: { state: false },
                 },
                 {
                     name: '職場技術Zivazi掌握你的未來',
@@ -146,6 +171,7 @@ var app = new Vue({
                         { name: 'Drupal', color: 'cyan' },
                         { name: 'Vue.js', color: 'green' },
                     ],
+                    gallery: { state: false },
                 },
                 {
                     name: '政大商學院信義不動產研究中心',
@@ -153,6 +179,7 @@ var app = new Vue({
                     imgUrl: 'ncscre.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Drupal', color: 'cyan' }],
+                    gallery: { state: false },
                 },
                 {
                     name: '黑琵特約旅店',
@@ -160,6 +187,7 @@ var app = new Vue({
                     imgUrl: 'wetland.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Nuxt.js', color: 'olive' }],
+                    gallery: { state: false },
                 },
                 {
                     name: '德奧名廚德奧國際',
@@ -167,6 +195,7 @@ var app = new Vue({
                     imgUrl: 'deraw.jpg',
                     media: 'mb',
                     tech: '',
+                    gallery: { state: false },
                 },
                 {
                     name: '曼娜麗股份有限公司',
@@ -174,6 +203,7 @@ var app = new Vue({
                     imgUrl: 'manara.jpg',
                     media: 'pc mb',
                     tech: '',
+                    gallery: { state: false },
                 },
             ],
 
@@ -184,6 +214,7 @@ var app = new Vue({
                     imgUrl: 'hashtag.jpg',
                     media: 'pc mb',
                     tech: '',
+                    gallery: { state: false },
                 },
                 {
                     name: 'Just Fliping',
@@ -191,6 +222,7 @@ var app = new Vue({
                     imgUrl: 'flip.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: "Let's Bingo Bingo!",
@@ -198,6 +230,7 @@ var app = new Vue({
                     imgUrl: 'bingo.jpg',
                     media: 'pc mb',
                     tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
                 },
                 {
                     name: 'Fruit Plan 水果配',
@@ -205,12 +238,39 @@ var app = new Vue({
                     imgUrl: 'fruit-plan.jpg',
                     media: 'mb',
                     tech: '',
+                    gallery: { state: false },
                 },
             ],
+
+            gallery: {
+                name: '敦南好好',
+                path: 'dunnan',
+                main: 1,
+                num: 4,
+            },
         };
     },
 
     methods: {
+        switchStatus: function(which, boolean) {
+            this.status[which] = boolean;
+            this.setWindowUnscroll(which, boolean);
+        },
+
+        setWindowUnscroll: function(which, boolean) {
+            var stopList = ['galleryModal'];
+
+            stopList.forEach(function(el, i) {
+                if (el == which) {
+                    if (boolean) {
+                        $('html').addClass('stop-scroll');
+                    } else {
+                        $('html').removeClass('stop-scroll');
+                    }
+                }
+            });
+        },
+
         formatedTech: function(media) {
             var txt = media.toUpperCase();
             txt = txt.replace(' ', '・');
@@ -219,11 +279,9 @@ var app = new Vue({
         },
 
         goAnchor: function(id, index) {
-            this.menu.sec = index;
-
             var target = $('#' + id);
-            console.log(target);
             if (target.length) {
+                this.menu.sec = index;
                 var scrollTo = target.offset().top;
                 $('body, html').animate({ scrollTop: scrollTo + 'px' }, 800);
             }
@@ -238,6 +296,8 @@ var $sec = null,
 
 $(window)
     .on('load', function() {
+        $('body').addClass('loaded');
+
         $sec = $('section');
         setInitData();
         lazyLoading('.js-lazy');
@@ -248,9 +308,6 @@ $(window)
 
         if (hashTag.length) {
             var scrollHeight = $(hashTag).offset().top;
-
-            console.log(scrollHeight);
-
             menuItems.forEach(function(el, i) {
                 if (hashTag.indexOf(el.anchor) !== -1) {
                     that.menu.sec = i + 1;

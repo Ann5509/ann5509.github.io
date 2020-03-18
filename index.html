@@ -10,7 +10,7 @@
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#ef426f">
+    <meta name="theme-color" content="#232323">
 
     <meta name="robots" content="index, follow">
     <meta name="spiders" content="all">
@@ -22,16 +22,17 @@
     <meta name="distribution" content="Taiwan">
 
     <meta name="url" content="">
-    <meta name="description" content="HI，我是純安，熟悉HTML＆CSS、基本修圖、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。">
-    <meta name="keywords" content="HI，我是純安，熟悉HTML＆CSS、基本修圖、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。" />
+    <meta name="description" content="HI，我是純安，熟悉HTML＆CSS、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。">
+    <meta name="keywords" content="HI，我是純安，熟悉HTML＆CSS、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。" />
     <meta itemprop="name" content="Ann Lin">
-    <meta itemprop="description" content="HI，我是純安，熟悉HTML＆CSS、基本修圖、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。">
+    <meta itemprop="description" content="HI，我是純安，熟悉HTML＆CSS、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。">
     <meta itemprop="image" content="images/opengraph.jpg">
 
     <meta property="og:title" content="Ann Lin" />
-    <meta property="og:description" content="HI，我是純安，熟悉HTML＆CSS、基本修圖、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。" />
+    <meta property="og:description" content="HI，我是純安，熟悉HTML＆CSS、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。" />
     <meta property="og:image" content="images/opengraph.jpg">
 
+    <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="images/favcion.png">
     <link rel="bookmark" href="images/favcion.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -44,7 +45,7 @@
     <title>Ann Lin</title>
 </head>
 
-<body id="top">
+<body>
 
     <div id="app">
 
@@ -60,12 +61,12 @@
                         <div class="f-col:12 f-col@sm:7">
                             <div class="about_detail">
                                 <h2 class="about_author">Ann Lin</h2>
-                                <h4 class="about_title">HI! <span class="sub-txt">我是純安</span></h4>
-                                <p class="about_txt">
-                                </p>
+                                <h1 class="about_title">HI! <span class="sub-txt">我是純安</span></h1>
+                                <p class="about_txt"></p>
                                 <ul class="about_contact">
                                     <li class="about_contact_item">
-                                        <a href="mailto:anagg5509@gmail.com" class="about_link">
+                                        <a href="mailto:anagg5509@gmail.com" class="about_link" target="_blank"
+                                            rel="noopener">
                                             <i class="fas fa-envelope"></i>
                                         </a>
                                     </li>
@@ -80,7 +81,7 @@
                                     <div class="circle_icon u-shadow"><i class="fab fa-html5"></i></div>
                                     <div class="circle_info">
                                         <div class="circle_title">
-                                            <a class="mar-auto">HTML5 / CSS3</a>
+                                            <p>HTML5 / CSS3</p>
                                         </div>
                                         <p>CSS Framework、SCSS
                                             <br />切版、更新與維護</p>
@@ -92,9 +93,9 @@
                                     <div class="circle_icon u-shadow"><i class="fab fa-js"></i></div>
                                     <div class="circle_info">
                                         <div class="circle_title">
-                                            <a class="mar-auto">JS / JQuery</a>
+                                            <p>JS / JQuery</p>
                                         </div>
-                                        <p>撰寫動態效果</p>
+                                        <p>動態撰寫</p>
                                     </div>
                                 </div>
                             </div>
@@ -103,20 +104,31 @@
                                     <div class="circle_icon u-shadow"><i class="fab fa-vuejs"></i></div>
                                     <div class="circle_info">
                                         <div class="circle_title">
-                                            <a class="mar-auto">Vue.js / Nuxt.js</a>
+                                            <p>Vue.js / Nuxt.js</p>
                                         </div>
-                                        <p>開發網站、元件功能應用</p>
+                                        <p>網站開發、元件功能應用</p>
                                     </div>
                                 </div>
                             </div>
+                            <!-- <div class="f-col:12 f-col@sm:6 f-col@lg:4">
+                                <div class="circle">
+                                    <div class="circle_icon u-shadow"><i class="fab fa-git-alt"></i></div>
+                                    <div class="circle_info">
+                                        <div class="circle_title">
+                                            <p>Git</p>
+                                        </div>
+                                        <p>版本控制</p>
+                                    </div>
+                                </div>
+                            </div> -->
                             <div class="f-col:12 f-col@sm:6 f-col@lg:4">
                                 <div class="circle">
                                     <div class="circle_icon u-shadow"><i class="fas fa-paint-brush"></i></div>
                                     <div class="circle_info">
                                         <div class="circle_title">
-                                            <a class="mar-auto">Adobe PS / Adobe XD</a>
+                                            <p>Adobe PS / Adobe XD</p>
                                         </div>
-                                        <p>切版、基礎修圖與設計</p>
+                                        <p>網站切圖</p>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +137,7 @@
                                     <div class="circle_icon u-shadow"><i class="fas fa-theater-masks"></i></div>
                                     <div class="circle_info">
                                         <div class="circle_title">
-                                            <a class="mar-auto">Spark AR Studio</a>
+                                            <p>Spark AR Studio</p>
                                         </div>
                                         <p>FB、IG 拍照變臉、互動設計</p>
                                     </div>
@@ -153,7 +165,7 @@
                             <div class="timeline_content">
                                 <h4>{{item.jobTitle}}</h4>
                                 <p class="timeline_txt">{{item.jobInfo}}</p>
-                                <a :href="item.address" class="icon-map" target="_blank"><i
+                                <a :href="item.address" class="icon-map" target="_blank" rel="noopener"><i
                                         class="fas fa-map-marker-alt"></i> {{item.company}}</a>
                             </div>
                         </div>
@@ -173,7 +185,8 @@
                         <div class="card u-shadow">
                             <div class="card_media">
 
-                                <a :href="item.url" class="col-margin" target="_blank" :title="item.name">
+                                <a :href="item.url" class="card_link" :class="{off: item.url.length == 0}"
+                                    target="_blank" rel="noopener">
                                     <div class="embed :5by4">
                                         <span class="embed_media" data-lazy="lazy"></span>
                                         <img class="embed_img js-lazy"
@@ -182,14 +195,15 @@
                                     </div>
                                 </a>
 
-                                <div class="card_gallery" v-if="item.gallery">
+                                <div class="card_gallery" v-if="status.galleryModal.state">
                                     <div class="btn-grp :united :square">
                                         <button class="btn"><i class="fas fa-images"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <main class="card_body">
-                                <a :href="item.url" class="card_link" target="_blank">
+                                <a :href="item.url" class="card_link" :class="{off: item.url.length == 0}"
+                                    target="_blank" rel="noopener">
                                     <h6 class="card_name">{{item.name}}</h6>
                                 </a>
                                 <div class="tag sz:sm clr:silver">
@@ -217,7 +231,8 @@
                     <div class="f-col:12 f-col@sm:6 f-col@md:4" v-for="(item,i) in fun">
                         <div class="card u-shadow">
                             <div class="card_media">
-                                <a :href="item.item" class="col-margin" target="_blank">
+                                <a :href="item.url" class="card_link" :class="{off: item.url.length == 0}"
+                                    target="_blank" rel="noopener">
                                     <div class="embed :5by4">
                                         <span class="embed_media" data-lazy="lazy"></span>
                                         <img class="embed_img js-lazy" :data-original="'images/fun/' + item.imgUrl"
@@ -226,14 +241,15 @@
                                     </div>
                                 </a>
 
-                                <div class="card_gallery" v-if="item.gallery">
+                                <div class="card_gallery" v-if="status.galleryModal">
                                     <div class="btn-grp :united :square">
                                         <button class="btn"><i class="fas fa-images"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <main class="card_body">
-                                <a :href="item.item" class="card_link" target="_blank">
+                                <a :href="item.url" class="card_link" :class="{off: item.url.length == 0}"
+                                    target="_blank" rel="noopener">
                                     <h6 class="card_name">{{item.name}}</h6>
                                 </a>
                                 <div class="tag sz:sm clr:silver">
@@ -256,12 +272,12 @@
         <div class="menunav sty-mb">
             <template v-for="(item,i) in menu.items">
                 <a :href="'#'+item.anchor" class="menunav_item" :class="{'active': menu.sec == i+1}" :key="i"
-                    @click.prevent="goAnchor(item.anchor, i+1)">
+                    @click="goAnchor(item.anchor, i+1)">
                     <span class="menunav_icon"><i :class="item.icon"></i></span>
                     <span class="menunav_txt">{{item.name}}</span>
                 </a>
             </template>
-            <a href="mailto:anagg5509@gmail.com" class="contact-href menunav_item" target="_blank">
+            <a href="mailto:anagg5509@gmail.com" class="contact-href menunav_item" target="_blank" rel="noopener">
                 <span class="menunav_icon"><i class="fas fa-envelope"></i></span>
                 <span class="menunav_txt">Contact Me</span>
             </a>
@@ -270,21 +286,57 @@
         <div class="menunav sty-pc">
             <template v-for="(item,i) in menu.items">
                 <a :href="'#'+item.anchor" class="menunav_item" :class="{'active': menu.sec == i+1}" :key="i"
-                    @click.prevent="goAnchor(item.anchor, i+1)">
+                    @click="goAnchor(item.anchor, i+1)">
                     <span class="menunav_icon"><i :class="item.icon"></i></span>
                     <span class="menunav_txt">{{item.name}}</span>
                 </a>
             </template>
-            <a href="mailto:anagg5509@gmail.com" class="contact-href menunav_item" target="_blank">
+            <a href="mailto:anagg5509@gmail.com" class="contact-href menunav_item" target="_blank" rel="noopener">
                 <span class="menunav_icon"><i class="fas fa-envelope"></i></span>
                 <span class="menunav_txt">Contact Me</span>
             </a>
         </div>
+
+        <!-- <div class="modal is:on">
+            <div class="modal_container">
+                <header class="modal_head">
+                    <h3 class="modal_title">{{gallery.name}}</h3>
+                </header>
+                <main class="modal_body">
+                    <div class="modal_content">
+                        <img :src="'images/gallery/dunnan/'+ gallery.main +'.png'" alt="" srcset="">
+                    </div>
+                </main>
+                <footer class="modal_foot">
+                    <div class="thumb">
+                        <div class="thumb_item" v-for="(item, i) in gallery.num">
+                            <div class="embed :5by4">
+                                <span class="embed_media"
+                                    :style="{backgroundImage: 'url(images/gallery/dunnan/' + (i+1) + '.png)' }"></span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <div class="modal_mask"></div>
+        </div> -->
     </div>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js'></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src='js/vue.min.js'></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(function (swReg) {
+                    console.log('[ServiceWorker] Register');
+                    // console.error('Service Worker registered', swReg);
+                })
+                .catch(function (error) {
+                    console.error('Service Worker Error', error);
+                });
+        }
+    </script>
 </body>
 
 </html>
