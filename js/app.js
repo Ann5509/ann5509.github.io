@@ -18,14 +18,14 @@ var app = new Vue({
 
             exps: [
                 {
-                    date: '2020 / 03 - 2019 / 04',
+                    date: '2019 / 04 ~ 2020 / 03',
                     jobTitle: '前端工程師',
                     jobInfo: '活動網站製作、前端開發、網站測試與維護，以及GTM追蹤代碼安裝。',
                     company: '邁圈數位整合有限公司',
                     address: 'https://goo.gl/maps/tZjVzaxAmZQqUHHE7',
                 },
                 {
-                    date: '2019 / 03 - 2018 / 06',
+                    date: '2018 / 06 ~ 2019 / 03',
                     jobTitle: '前端工程師',
                     jobInfo:
                         '使用 Drupal(CMS，內容管理系統)、Vue.js與Nuxt.js網頁開發。團隊分工合作開發如官方網站、一頁式活動網站以及購物網站。',
@@ -33,7 +33,7 @@ var app = new Vue({
                     address: 'https://goo.gl/maps/7nSE5KKyZpn',
                 },
                 {
-                    date: '2018 / 06 - 2016 / 07',
+                    date: '2016 / 07 ~ 2018 / 06',
                     jobTitle: '網站設計 / 實習',
                     jobInfo:
                         '參與專案規劃與製作、網站製作，如官方網站、活動網站、EDM電子郵件廣告，以及網站前後台的維護。',
@@ -41,7 +41,7 @@ var app = new Vue({
                     address: 'https://goo.gl/maps/SJx1nTNjBCC2',
                 },
                 {
-                    date: '2015／05 - 2015／03',
+                    date: '2015／03 ~ 2015／05',
                     jobTitle: '網站開發助理 / 實習',
                     jobInfo: '協助Prototype與系統文件整理等系統建置作業準備，以及網站SEO優化建議。',
                     company: '技嘉科技股份有限公司',
@@ -50,6 +50,14 @@ var app = new Vue({
             ],
 
             works: [
+                {
+                    name: 'Kule Lazy 4 (CSS Framework) Vue.js 組件開發',
+                    url: 'https://demo-lazy4vue.akensite.ml/vueComponents/accordion',
+                    imgUrl: 'lazy4.jpg',
+                    media: 'pc mb',
+                    tech: [{ name: 'Vue.js', color: 'green' }],
+                    gallery: { state: false },
+                },
                 {
                     name: 'ETUDE HOUSE 專屬美肌魔飾',
                     url: 'https://faceblur.etudehouseevent.tw/',
