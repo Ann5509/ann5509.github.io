@@ -240,7 +240,7 @@ var app = new Vue({
                     url:
                         'https://www.facebook.com/fbcameraeffects/testit/760834367774051/M2M1MzMzYzYyMTVjMTAxM2YzNTNhNjZlOGM2NjAzMzQ=/',
                     imgUrl: 'spark-blink-game.jpg',
-                    txt: '點擊螢幕開始遊戲，利用眨眼讓外送員跳過路上的障礙物。',
+                    txt: '點擊螢幕開始遊戲，利用眨眼讓外送員跳過路上的障礙物。(未送審)',
                     tech: [{ name: 'Spark AR', color: 'red' }],
                     gallery: { state: false },
                 },
@@ -249,7 +249,7 @@ var app = new Vue({
                     url:
                         'https://video.ftpe8-2.fna.fbcdn.net/v/t42.9040-2/75746180_1346987745476193_4290534696476999680_n.mp4?_nc_cat=100&_nc_sid=985c63&efg=eyJybHIiOjMwMCwicmxhIjo1MTIsInZlbmNvZGVfdGFnIjoic3ZlX3NkIn0%3D&_nc_ohc=Hx8GNof276cAX-D1ngs&rl=300&vabr=70&_nc_ht=video.ftpe8-2.fna&oh=dc5eecf9c4c1bf950c31871557de743d&oe=5E7337C2',
                     imgUrl: 'hashtag.jpg',
-                    txt: '使用 Facebook Graph API。登入以搜尋IG公開貼文的hastag。功能尚未送審。',
+                    txt: '使用 Facebook Graph API。登入以搜尋IG公開貼文的hastag。(未送審)',
                     media: 'pc mb',
                     tech: '',
                     gallery: { state: false },
@@ -276,7 +276,7 @@ var app = new Vue({
                     name: 'Fruit Plan 水果配',
                     url: 'https://ann5509.github.io/myfruit/index.html',
                     imgUrl: 'fruit-plan.jpg',
-                    txt: '為練習JS CRUD 的小題目。',
+                    txt: '練習 JS 的小題目，利用 ajax 取用 json 資料。',
                     media: 'mb',
                     tech: '',
                     gallery: { state: false },
