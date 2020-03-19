@@ -356,9 +356,18 @@ img {
     }
 
     &_name {
-        margin-bottom: 1rem;
         overflow: hidden;
-        height: calc(2rem * 1.375);
+        // height: calc(2rem * 1.375);
+        border-bottom: 1px solid #dadada;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    &_txt {
+        font-size: 14px;
+        color: #a2a2a2;
+        margin: 0;
+        min-height: calc(28px * 1.42);
     }
 
     &_body {
@@ -419,7 +428,6 @@ img {
     }
 
     &_txt {
-        min-height: 52px;
         margin: 0;
     }
 

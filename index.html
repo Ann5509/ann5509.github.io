@@ -80,18 +80,17 @@
                         <div class="f-row">
                             <div class="f-col:12 f-col@sm:6 f-col@lg:4">
                                 <div class="section_header">
-                                    <h2 class="section_title u-clr:light">開發語言
-                                        <span class="section_subtitle u-clr:light">/</span>
+                                    <h2 class="section_title u-clr:light">開發技術
+                                        <span class="section_subtitle u-clr:light">/ Skills</span>
                                     </h2>
                                 </div>
                                 <div class="circle">
                                     <div class="circle_icon u-shadow"></div>
                                     <div class="circle_info">
                                         <div class="circle_title">
-                                            <p>HTML5 / CSS3</p>
+                                            <p>HTML / SCSS</p>
                                         </div>
-                                        <p class="circle_txt">CSS Framework、SCSS
-                                            <br />切版、更新與維護</p>
+                                        <p class="circle_txt">切版、更新與維護</p>
                                     </div>
                                 </div>
                                 <div class="circle">
@@ -110,6 +109,15 @@
                                             <p>Vue.js / Nuxt.js</p>
                                         </div>
                                         <p class="circle_txt">網站開發、元件功能應用</p>
+                                    </div>
+                                </div>
+                                <div class="circle">
+                                    <div class="circle_icon u-shadow"></div>
+                                    <div class="circle_info">
+                                        <div class="circle_title">
+                                            <p>Kule Lazy 4</p>
+                                        </div>
+                                        <p class="circle_txt">CSS Framework</p>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +142,7 @@
                                         <div class="circle_title">
                                             <p>Adobe PS / Adobe XD / Zeplin</p>
                                         </div>
-                                        <p class="circle_txt">網站切圖</p>
+                                        <p class="circle_txt">網站切圖與製作</p>
                                     </div>
                                 </div>
                                 <div class="circle">
@@ -234,6 +242,9 @@
                                 <a :href="item.url" class="card_link" :class="{off: item.url.length == 0}"
                                     target="_blank" rel="noopener">
                                     <h6 class="card_name">{{item.name}}</h6>
+                                    <slot v-if="item.txt">
+                                        <p class="card_txt">{{item.txt}}</p>
+                                    </slot>
                                 </a>
                                 <div class="tag sz:sm clr:silver">
                                     <span class="tag_txt">{{formatedTech(item.media)}}</span>
@@ -280,10 +291,15 @@
                                 <a :href="item.url" class="card_link" :class="{off: item.url.length == 0}"
                                     target="_blank" rel="noopener">
                                     <h6 class="card_name">{{item.name}}</h6>
+                                    <slot v-if="item.txt">
+                                        <p class="card_txt">{{item.txt}}</p>
+                                    </slot>
                                 </a>
-                                <div class="tag sz:sm clr:silver">
-                                    <span class="tag_txt">{{formatedTech(item.media)}}</span>
-                                </div>
+                                <slot v-if="item.media">
+                                    <div class="tag sz:sm clr:silver">
+                                        <span class="tag_txt">{{formatedTech(item.media)}}</span>
+                                    </div>
+                                </slot>
                                 <slot v-if="item.tech">
                                     <div class="tag sz:sm" v-for="(el,i) in item.tech" :class="['clr:'+el.color]">
                                         <span class="tag_txt">{{el.name}}</span>
