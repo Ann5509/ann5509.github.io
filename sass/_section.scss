@@ -1,0 +1,69 @@
+.section {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+
+  &-kv {
+    background-color: $red;
+  }
+
+  &-traffic {
+    height: auto;
+  }
+
+  &-mixin {
+    background-image: url(img/curtain.png);
+    @extend %bgImage;
+    height: auto;
+    padding: 90px 17px 100px;
+
+    @include bp-md {
+      padding: 136px 30px;
+    }
+  }
+
+  &-contact {
+    // position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: auto;
+  }
+}
+
+main {
+  position: relative;
+}
+
+// shadow
+.shadow {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &-cover {
+    &:before,
+    &:after {
+      pointer-events: none;
+      @extend %void;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:before {
+      width: 100%;
+      background-image: url(img/shadow.png);
+      @extend %bgImage;
+    }
+  }
+}
