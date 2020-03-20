@@ -20,7 +20,8 @@ var app = new Vue({
                 {
                     date: '2019 / 04 ~ 2020 / 03',
                     jobTitle: '前端工程師',
-                    jobInfo: '活動網站製作、前端開發、網站測試與維護，以及GTM追蹤代碼安裝。',
+                    jobInfo:
+                        '活動網站製作、前端開發、網站測試與維護、GTM追蹤代碼安裝，以及Kule Lazy 4 Vue.js 組件開發。',
                     company: '邁圈數位整合有限公司',
                     address: 'https://goo.gl/maps/tZjVzaxAmZQqUHHE7',
                 },
