@@ -45,7 +45,7 @@ var app = new Vue({
                     jobTitle: '網站開發助理 / 實習',
                     jobInfo: '協助Prototype與系統文件整理等系統建置作業準備，以及網站SEO優化建議。',
                     company: '技嘉科技股份有限公司',
-                    address: 'https://goo.gl/maps/SJx1nTNjBCC2',
+                    address: 'https://goo.gl/maps/vHAUSNMsdZxbJRdz8',
                 },
             ],
 
