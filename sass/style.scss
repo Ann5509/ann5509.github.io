@@ -141,6 +141,10 @@ img {
 
     &_pic {
         margin-bottom: 1rem;
+        overflow: hidden;
+        border-radius: 5px;
+        background: #313131;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
         @include bp-sm {
             margin-bottom: 0;
         }
