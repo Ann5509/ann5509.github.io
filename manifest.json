@@ -1,13 +1,12 @@
 {
     "name": "Ann Lin",
     "short_name": "Ann Lin",
-    "start_url": "index.html",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#fff",
     "theme_color": "#232323",
     "orientation": "natural",
     "description": "HI，我是純安，熟悉HTML＆CSS、基本修圖、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。",
-    "start_url": "/",
     "icons": [
         {
             "src": "images/icon-192x192.png",
