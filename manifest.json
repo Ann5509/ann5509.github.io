@@ -7,20 +7,21 @@
     "theme_color": "#232323",
     "orientation": "natural",
     "description": "HI，我是純安，熟悉HTML＆CSS、基本修圖、JS與Jquery，以及應用Vue.js、Nuxt.js等開發框架。",
+    "start_url": "/",
     "icons": [
         {
-            "src": "images/icon-48x48.png",
-            "sizes": "48x48",
+            "src": "images/icon-192x192.png",
+            "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "images/icon-72x72.png",
-            "sizes": "72x72",
+            "src": "images/icon-256x256.png",
+            "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "images/icon-144x144.png",
-            "sizes": "144x144",
+            "src": "images/icon-512x512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ]
