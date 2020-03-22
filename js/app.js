@@ -89,7 +89,7 @@ var app = new Vue({
                 },
                 {
                     name: '敦南好好',
-                    url: 'https://github.com/Ann5509/projects.dunnan',
+                    url: 'https://ann5509.github.io/projects.dunnan/',
                     imgUrl: 'dunnan.jpg',
                     txt: '一頁式建案網站，主視覺使用滾動視差效果，客製化的輪播功能。',
                     media: 'pc mb',
