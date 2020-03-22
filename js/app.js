@@ -89,7 +89,7 @@ var app = new Vue({
                 },
                 {
                     name: '敦南好好',
-                    url: '',
+                    url: 'https://github.com/Ann5509/projects.dunnan',
                     imgUrl: 'dunnan.jpg',
                     txt: '一頁式建案網站，主視覺使用滾動視差效果，客製化的輪播功能。',
                     media: 'pc mb',
@@ -102,7 +102,7 @@ var app = new Vue({
                 },
                 {
                     name: '迪卡儂十項全能運動派對活動',
-                    url: '',
+                    url: 'https://ann5509.github.io/projects.decathlon/',
                     imgUrl: 'decathlon.jpg',
                     txt: '使用 Nuxt.js 製作的一頁式活動網站。',
                     media: 'pc mb',
@@ -115,7 +115,7 @@ var app = new Vue({
                 },
                 {
                     name: '正義聯盟',
-                    url: '',
+                    url: 'https://justice.matcher.tw/',
                     imgUrl: 'justice.jpg',
                     txt: '一頁式建案網站，以滾動換頁的方式瀏覽其餘內容。',
                     media: 'pc mb',
