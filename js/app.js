@@ -257,7 +257,7 @@ var app = new Vue({
                 },
                 {
                     name: 'Just Fliping',
-                    url: 'https://flip.oppswen.com/',
+                    url: 'https://ann5509.github.io/flip/',
                     imgUrl: 'flip.jpg',
                     txt: '使用 Vue.js 與 CSS 撰寫的翻牌遊戲。',
                     media: 'pc mb',
