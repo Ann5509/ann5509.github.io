@@ -378,11 +378,11 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js')
                 .then(function (swReg) {
-                    console.log('[ServiceWorker] Register');
+                    // console.log('[ServiceWorker] Register');
                     // console.error('Service Worker registered', swReg);
                 })
                 .catch(function (error) {
-                    console.error('Service Worker Error', error);
+                    // console.error('Service Worker Error', error);
                 });
         }
     </script>
