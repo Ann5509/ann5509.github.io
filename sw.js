@@ -4,7 +4,7 @@ const FILES_TO_CACHE = ['/'];
 self.addEventListener('install', evt => {
     evt.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
-            console.log('[ServiceWorker] install');
+            // console.log('[ServiceWorker] install');
             return cache.addAll(FILES_TO_CACHE);
         })
     );
@@ -17,7 +17,7 @@ self.addEventListener('activate', evt => {
         caches.keys().then(keyList => {
             return Promise.all(
                 keyList.map(key => {
-                    console.log('[ServiceWorker] Activate');
+                    // console.log('[ServiceWorker] Activate');
                     if (key !== CACHE_NAME) {
                         return caches.delete(key);
                     }
@@ -33,7 +33,7 @@ self.addEventListener('fetch', event => {
     if (event.request.url.indexOf('http') === 0) {
         event.respondWith(
             caches.match(event.request).then(response => {
-                console.log('[ServiceWorker] Fetch');
+                // console.log('[ServiceWorker] Fetch');
                 return (
                     response ||
                     fetch(event.request).then(res =>

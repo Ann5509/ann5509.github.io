@@ -29,7 +29,7 @@ var app = new Vue({
                     date: '2018 / 06 ~ 2019 / 03',
                     jobTitle: '前端工程師',
                     jobInfo:
-                        '使用 Drupal(CMS，內容管理系統)、Vue.js與Nuxt.js網頁開發。團隊分工合作開發如官方網站、一頁式活動網站以及購物網站。',
+                        '使用 Drupal(CMS，內容管理系統)與 Vue.js，以及 Nuxt.js 開發。團隊分工合作開發如官方網站、一頁式活動網站以及購物網站。',
                     company: '聖誕老人國際股份有限公司',
                     address: 'https://goo.gl/maps/7nSE5KKyZpn',
                 },
