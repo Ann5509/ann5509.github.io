@@ -241,7 +241,7 @@ var app = new Vue({
                     url:
                         'https://www.facebook.com/fbcameraeffects/testit/760834367774051/M2M1MzMzYzYyMTVjMTAxM2YzNTNhNjZlOGM2NjAzMzQ=/',
                     imgUrl: 'spark-blink-game.jpg',
-                    txt: '點擊螢幕開始遊戲，眨眼讓外送員跳過路上的障礙物。(未送審)',
+                    txt: '使用 Spark AR Studio 製作。點擊螢幕開始遊戲，眨眼讓外送員跳過路上的障礙物。(未送審)',
                     tech: [{ name: 'Spark AR', color: 'red' }],
                     gallery: { state: false },
                 },
